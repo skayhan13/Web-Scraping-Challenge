@@ -16,6 +16,8 @@ In this assignment, you will build a web application that scrapes various websit
 
 5. Push the above changes to GitHub or GitLab.
 
+6. It is imperative to have the Chrome Driver installed on your machine.  You may go here to download it: https://chromedriver.storage.googleapis.com/index.html?path=89.0.4389.23/
+
 ## Step 1 - Scraping
 
 Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
