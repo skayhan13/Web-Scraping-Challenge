@@ -18,6 +18,8 @@ In this assignment, you will build a web application that scrapes various websit
 
 6. It is imperative to have the Chrome Driver installed on your machine.  You may go here to download it: https://chromedriver.storage.googleapis.com/index.html?path=89.0.4389.23/
 
+7. Finally, it is also imperative to have a "templates" (case-sensitive) directory in order for the Flask App to properly work.  You must store the index.html in that folder.  If the index.html is viewed in your web browser, it will appear broken.  You must use the Flask App to render the index.html properly.
+
 ## Step 1 - Scraping
 
 Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.

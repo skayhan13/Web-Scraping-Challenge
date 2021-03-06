@@ -30,7 +30,7 @@ def scrape():
     browser.visit(images_url)
     html = browser.html
     images_soup = bs(html, 'html.parser')
-    
+
     # Retrieve featured image link
     relative_image_path = images_soup.find_all('img')[3]["src"]
     featured_image_url = jpl_nasa_url + relative_image_path
@@ -53,6 +53,7 @@ def scrape():
     all_mars_hemispheres = hemispheres_soup.find('div', class_='collapsible results')
     mars_hemispheres = all_mars_hemispheres.find_all('div', class_='item')
     hemisphere_image_urls = []
+    
     # Iterate through each hemisphere data
     for i in mars_hemispheres:
         # Collect Title
