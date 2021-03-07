@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup as bs
 import pandas as pd
 import requests
 import pymongo
+import time
 
 def init_browser():
     # @NOTE: Replace the path with your actual path to the chromedriver
@@ -17,23 +18,25 @@ def scrape():
     # Mars News URL of page to be scraped
     news_url = 'https://mars.nasa.gov/news/'
     browser.visit(news_url)
+    time.sleep(1)
     html = browser.html
     news_soup = bs(html, 'html.parser')
 
     # Retrieve the latest news title and paragraph
-    news_title = news_soup.find_all('div', class_='content_title')[0].text
+    news_title = news_soup.find_all('div', class_='content_title')[1].text
     news_p = news_soup.find_all('div', class_='article_teaser_body')[0].text
 
     # Mars Image to be scraped
     jpl_nasa_url = 'https://www.jpl.nasa.gov'
     images_url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
     browser.visit(images_url)
+    time.sleep(1)
     html = browser.html
     images_soup = bs(html, 'html.parser')
 
     # Retrieve featured image link
     relative_image_path = images_soup.find_all('img')[3]["src"]
-    featured_image_url = jpl_nasa_url + relative_image_path
+    featured_image_url = relative_image_path
 
     # Mars facts to be scraped, converted into html table
     facts_url = 'https://space-facts.com/mars/'
@@ -47,6 +50,7 @@ def scrape():
     usgs_url = 'https://astrogeology.usgs.gov'
     hemispheres_url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
     browser.visit(hemispheres_url)
+    time.sleep(1)
     hemispheres_html = browser.html
     hemispheres_soup = bs(hemispheres_html, 'html.parser')
     # Mars hemispheres products data
@@ -61,7 +65,8 @@ def scrape():
         title = hemisphere.h3.text        
         # Collect image link by browsing to hemisphere page
         hemisphere_link = hemisphere.a["href"]    
-        browser.visit(usgs_url + hemisphere_link)        
+        browser.visit(usgs_url + hemisphere_link) 
+        time.sleep(1)       
         image_html = browser.html
         image_soup = bs(image_html, 'html.parser')        
         image_link = image_soup.find('div', class_='downloads')
@@ -80,5 +85,7 @@ def scrape():
         "fact_table": str(mars_html_table),
         "hemisphere_images": hemisphere_image_urls
     }
+
+    browser.quit()
 
     return mars_dict
