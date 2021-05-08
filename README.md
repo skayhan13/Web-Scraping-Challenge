@@ -27,7 +27,6 @@ Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, an
 news_title = "NASA's Next Mars Mission to Investigate Interior of Red Planet"
 
 news_p = "Preparation of NASA's next spacecraft to Mars, InSight, has ramped up this summer, on course for launch next May from Vandenberg Air Force Base in central California -- the first interplanetary launch in history from America's West Coast."
-![scrape2](Images/scrape2.png)
 
 ### JPL Mars Space Images - Featured Image
 
@@ -43,7 +42,7 @@ news_p = "Preparation of NASA's next spacecraft to Mars, InSight, has ramped up 
 # Example:
 featured_image_url = 'https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA16225_hires.jpg'
 ```
-
+![scrape2](Images/scrape2.png)
 ### Mars Facts
 
 * Visit the Mars Facts webpage [here](https://space-facts.com/mars/) and use Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
