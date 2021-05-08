@@ -2,23 +2,15 @@
 
 ## Mission to Mars
 
-In this assignment, you will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what you need to do.
+In this assignment, you will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. 
+
+![scrape](Images/scrape.png)
 
 ### Before You Begin
 
-1. Create a new repository for this project called `web-scraping-challenge`. **Do not add this homework to an existing repository**.
+1. It is imperative to have the Chrome Driver installed on your machine.  You may go here to download it: https://chromedriver.storage.googleapis.com/index.html?path=89.0.4389.23/
 
-2. Clone the new repository to your computer.
-
-3. Inside your local git repository, create a directory for the web scraping challenge. Use a folder name to correspond to the challenge: **Missions_to_Mars**.
-
-4. Add your notebook files to this folder as well as your flask app.
-
-5. Push the above changes to GitHub or GitLab.
-
-6. It is imperative to have the Chrome Driver installed on your machine.  You may go here to download it: https://chromedriver.storage.googleapis.com/index.html?path=89.0.4389.23/
-
-7. Finally, it is also imperative to have a "templates" (case-sensitive) directory in order for the Flask App to properly work.  You must store the index.html in that folder.  If the index.html is viewed in your web browser, it will appear broken.  You must use the Flask App to render the index.html properly.
+2. Finally, it is also imperative to have a "templates" (case-sensitive) directory in order for the Flask App to properly work.  You must store the index.html in that folder.  If the index.html is viewed in your web browser, it will appear broken.  You must use the Flask App to render the index.html properly.
 
 ## Step 1 - Scraping
 
@@ -35,7 +27,7 @@ Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, an
 news_title = "NASA's Next Mars Mission to Investigate Interior of Red Planet"
 
 news_p = "Preparation of NASA's next spacecraft to Mars, InSight, has ramped up this summer, on course for launch next May from Vandenberg Air Force Base in central California -- the first interplanetary launch in history from America's West Coast."
-```
+![scrape2](Images/scrape2.png)
 
 ### JPL Mars Space Images - Featured Image
 
@@ -95,18 +87,6 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 * Create a template HTML file called `index.html` that will take the mars data dictionary and display all of the data in the appropriate HTML elements. Use the following as a guide for what the final product should look like, but feel free to create your own design.
 
 - - -
-
-## Step 3 - Submission
-
-To submit your work to BootCampSpot, create a new GitHub repository and upload the following:
-
-1. The Jupyter Notebook containing the scraping code used.
-
-2. Screenshots of your final application.
-
-3. Submit the link to your new repository to BootCampSpot.
-
-4. Ensure your repository has regular commits (i.e. 20+ commits) and a thorough README.md file
 
 ## Hints
 
